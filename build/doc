@@ -1,0 +1,471 @@
+
+// // // https://the-trivia-api.com/v2/questions
+
+// // let questiondiv = document.querySelector('#questiondiv')
+// // let answerdiv = document.querySelector('#answerdiv')
+// // let nestbtn  = document.querySelector('#nextbtn')
+
+
+// // const renderQuestion = (questions, index ) => {
+    
+// //     if (index < questions.length) {
+// //         // console.log(questions[index]);
+// // questiondiv.innerHTML =
+// // `
+// // <h4 href="#" class="list-group-item list-group-item-action active" aria-current="true">
+
+// // ${questions[index].question.text}
+
+// // </h4>
+// // `
+// //     } else {
+// //         console.log('No more questions available');
+// //         questiondiv.innerHTML += ""
+// //     }}
+
+
+// // function renderanswer(answer,index ,arr) {
+// //         if (index < answer.length) {
+// //         answerdiv.innerHTML = 
+// //         `
+
+// //         <ul class="list-group" id="listGroup">
+      
+        
+// //     </ul>
+
+
+
+
+
+
+// // `
+
+
+
+
+// // }
+// //  else {
+// //     console.log('No more answer available');
+// //     answerdiv.innerHTML += ""
+// // }
+
+        
+// //     }
+
+ 
+
+   
+
+// //     // Function to handle answer submission
+// //     function submitAnswer(arr ,Answer) {
+// //         const arrr = arr; // Example options
+// //     const correctAnswer = Answer; // Define the correct answer
+// //         const selectedRadio = document.querySelector('input[name="listGroupRadio"]:checked');
+// //         console.log(document.querySelector('input[name="listGroupRadio"]:checked'));
+// //         if (selectedRadio) {
+// //             const selectedValue = selectedRadio.value;
+// //             const parentLi = selectedRadio.parentElement;
+// //             if (selectedValue === correctAnswer) {
+// //                 console.log('correct ');
+// //                 parentLi.classList.add('correct-answer');
+// //                 parentLi.classList.remove('wrong-answer');
+// //             } else {
+// //                 console.log("incorect");
+// //                 parentLi.classList.add('wrong-answer');
+// //                 parentLi.classList.remove('correct-answer');
+// //             }
+// //         } else {
+// //             console.log("Please select an answer.");
+// //         }
+
+
+        
+// //     }
+
+
+
+
+// //     // Add options dynamically
+
+// //     // Add event listener to the submit button
+// //     document.getElementById('submitAnswer').addEventListener('click', submitAnswer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //     // const arr = ['Option 1', 'Option 2', 'Option 3', 'Option 4']; // Example options
+// //     // // const correctAnswer = 'Option 2'; // Define the correct answer
+
+// //     // // Function to handle answer submission
+
+
+// //     // function submitAnswer(arr,correctAnswer) {
+// //     //     // const selectedRadio = document.querySelector('input[name="listGroupRadio"]:checked');
+
+// //     //     const selectedRadio = document.querySelector('input[name="listGroupRadio"]:checked');
+// //     //     console.log(selectedRadio);
+// //     //     if (selectedRadio) {
+// //     //         const selectedValue = selectedRadio.value;
+// //     //         const parentLi = selectedRadio.parentElement;
+// //     //         console.log(selectedRadio.value);
+// //     //         if (selectedValue === correctAnswer) {
+// //     //             console.log('corect');
+// //     //             parentLi.classList.add('correct-answer');
+// //     //             parentLi.classList.remove('wrong-answer');
+// //     //         } else {
+// //     //             console.log('incorect');
+// //     //             parentLi.classList.add('wrong-answer');
+// //     //             parentLi.classList.remove('correct-answer');
+// //     //         }
+// //     //     } else {
+// //     //         console.log("Please select an answer.");
+// //     //     }
+// //     // }
+
+
+
+// //     // // Add event listener to the submit button
+// //     // // nestbtn.addEventListener('click', submitAnswer);
+
+// //     // // // Add options dynamically (optional, if you want to use arr values)
+// //     // const listGroup = document.getElementById('listGroup');
+// //     // listGroup.innerHTML = arr.map((item, index) => `
+// //     //     <li class="list-group-item">
+// //     //         <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="${item}" id="radio${index + 1}">
+// //     //         <label class="form-check-label" for="radio${index + 1}">${item}</label>
+// //     //     </li>
+// //     // `).join('');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // // all answer points function 
+// // function points(res,index) {
+// //    let corectanswer = res[index].correctAnswer
+// //     console.log(res[index].correctAnswer);
+// //     let arr = [...res[index].incorrectAnswers,res[index].correctAnswer]
+// //     // console.log(arr);
+// //      function shuffleArray(array) {
+// //             for (let i = array.length - 1; i > 1; i--) {
+// //                 const j = Math.floor(Math.random() * (i + 1));
+// //                 console.log(j);
+// //                 [array[i], array[j]] = [array[j], array[i]];
+// //             }
+// //             return array;
+// //         }
+// //         // console.log(ar);
+        
+// //         const shuffled = shuffleArray(arr);
+
+// //         // console.log(shuffled);
+        
+// //     // console.log(arr);
+
+// //                 for (let i = 0; i < shuffled.length; i++) {
+// //                     // return arr
+// //                     // console.log(arr)
+// //                     renderanswer(res ,index,arr)
+
+
+// //                     ;}
+
+
+
+// //                     submitAnswer(arr , corectanswer)
+
+
+
+
+    
+
+
+// //                     const listGroup = document.getElementById('listGroup');
+// //                     shuffled.forEach((item, index) => {
+// //                         const li = document.createElement('li');
+// //                         li.className = 'list-group-item';
+// //                         li.innerHTML = `
+// //                             <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="${item}" id="radio${index + 1}">
+// //                             <label class="form-check-label" for="radio${index + 1}">${item}</label>
+// //                         `;
+// //                         listGroup.appendChild(li);
+// //                     });
+
+                    
+                    
+    
+// // }
+
+
+// // const allQuestion = async () => {
+// //     try {
+// //         let index = 0;
+// //         const data = await fetch('https://the-trivia-api.com/v2/questions');
+// //         const res = await data.json();
+// //         console.log(res);
+// //         // let arr = [...res[index].incorrectAnswers,res[index].correctAnswer]
+// //         // console.log(arr);
+// //         points(res ,0)
+    
+
+
+
+
+// //         nestbtn.addEventListener('click',()=>{
+
+            
+// //             index += 1
+// //             if (index < res.length){
+// //                 renderQuestion(res , index)
+            
+// //                 points(res,index)
+
+// //             }
+// //             else{
+// //                 points(res,0)
+
+// //                 console.log('no question');
+// //                 questiondiv.innerHTML = "vip done hogaya marks mil jaye jai apko"
+// //                 answerdiv.innerHTML ="tata khatam buy buy "
+        
+// //             }
+            
+// //         })
+
+// //         // console.log(arr);
+// //         // console.log(res[index].in);
+
+
+       
+
+
+
+       
+        
+
+// //         // Initial rendering of the first question
+// //         renderQuestion(res, index);
+        
+
+
+// //         // Add event listener to the button
+// //         // nestbtn.addEventListener('click', () => {
+// //         //     index += 1;
+// //         //     if (index < res.length) {
+// //         //         renderQuestion(res, index);
+// //         //     } else {
+// //         //         console.log('No more questions available');
+// //         //     }
+// //         // });
+// //     } catch (error) {
+// //         console.log(error);
+// //     }
+// // };
+
+// // allQuestion();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  const renderQuestion = (questions, index) => {
+//             if (index < questions.length) {
+//                 questiondiv.innerHTML = `
+//                     <h4 class="list-group-item list-group-item-action active" aria-current="true">
+//                         ${questions[index].question.text}
+//                     </h4>
+//                 `;
+//             } else {
+//                 console.log('No more questions available');
+//                 questiondiv.innerHTML = "";
+//             }
+//         };
+
+//         const renderAnswers = (answers) => {
+//             answerdiv.innerHTML = `
+//                 <ul class="list-group" id="listGroup">
+//                     ${answers.map((answer, index) => `
+//                         <li class="list-group-item">
+//                             <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="${answer}" id="radio${index + 1}">
+//                             <label class="form-check-label" for="radio${index + 1}">${answer}</label>
+//                         </li>
+//                     `).join('')}
+//                 </ul>
+//             `;
+//         };
+
+//         const shuffleArray = (array) => {
+//             for (let i = array.length - 1; i > 0; i--) {
+//                 const j = Math.floor(Math.random() * (i + 1));
+//                 [array[i], array[j]] = [array[j], array[i]];
+//             }
+//             return array;
+//         };
+
+//  answer = false
+
+       
+
+//         const submitAnswer = (correctAnswer) => {
+//             const selectedRadio = document.querySelector('input[name="listGroupRadio"]:checked');
+//             if (selectedRadio) {
+//                 const selectedValue = selectedRadio.value;
+//                 const parentLi = selectedRadio.closest('li');
+//                 if (selectedValue === correctAnswer) {
+//                     console.log('Correct');
+
+//                     answer = selectedValue === correctAnswer
+                    
+//                     parentLi.classList.add('correct-answer');
+//                     parentLi.classList.remove('wrong-answer');
+                    
+//                 } else {
+//                     console.log('Incorrect');
+//                     parentLi.classList.add('wrong-answer');
+//                     parentLi.classList.remove('correct-answer');
+//                 }
+//             } else {
+//                 console.log("Please select an answer.");
+//             }
+//         };
+
+
+
+
+       
+
+
+
+
+
+//         const points = (res, index) => {
+//             const correctAnswer = res[index].correctAnswer;
+//             console.log(res[index].correctAnswer);
+//             const answers = [...res[index].incorrectAnswers, correctAnswer];
+//             const shuffledAnswers = shuffleArray(answers);
+//             renderAnswers(shuffledAnswers);
+//             document.getElementById('submitAnswer').onclick = () => submitAnswer(correctAnswer);
+//         };
+
+//         const allQuestion = async () => {
+//             try {
+//                 let index = 0;
+//                 const data = await fetch('https://the-trivia-api.com/v2/questions');
+//                 const res = await data.json();
+//                 renderQuestion(res, index);
+//                 points(res, index);
+
+
+            
+
+// next(index,res)
+                
+                
+//             } catch (error) {
+//                 console.log(error);
+//             }
+//         };
+
+
+
+
+//         function next(index,res) {
+//             if (answer) {
+                 
+//                     index += 1;
+//                     if (index < res.length) {
+//                         renderQuestion(res, index);
+//                         points(res, index);
+//                     } else {
+//                         console.log('No more questions');
+//                         questiondiv.innerHTML = "All done! Great job!";
+//                         answerdiv.innerHTML = "No more questions available.";
+//                     }
+//                 }
+            
+//             else{
+
+//             }
+//             ;
+
+            
+//         }
+
+//         allQuestion();
+
